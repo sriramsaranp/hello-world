@@ -1,0 +1,14 @@
+
+import cv2
+from skimage.measure import compare_ssim
+import numpy as np
+
+kernel = np.ones((7, 7), np.uint8)
+img_a = cv2.imread('main.jpg')
+img_b = cv2.imread('i8.jpg')
+img_a_gray = cv2.cvtColor(img_a, cv2.COLOR_BGR2GRAY)
+img_b_gray = cv2.cvtColor(img_b, cv2.COLOR_BGR2GRAY)
+
+(index, diff) = compare_ssim(img_a_gray, img_b_gray, full=True)
+diff = (diff * 255).astype("uint8")
+print("SSIM: {}".format(index))
