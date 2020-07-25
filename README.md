@@ -1,3 +1,2 @@
-# hello-world
-First repository
-I am also known as seeker_pss and I am knew to programming. 
+This repository consists of all the codes related to the Traffic Light Control Project
+It includes the codes of Image Processing, Servo Motor, Nokia LCD
